@@ -1,4 +1,6 @@
-## 2.0.0
+## 1.0.0
+
+Migration from [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast):
 
 -   [breaking]: Svelte 5 only.
 -   [breaking]: Uses runes instead of stores.
@@ -11,3 +13,4 @@
     -   `"bottom-left"`
     -   `"bottom-right"`
 -   [breaking]: Converted `interface` to `type`.
+-   [breaking]: Possibly some other breaking changes.
