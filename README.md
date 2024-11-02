@@ -1,13 +1,13 @@
 <img src="header-image.png" />
 
+# Svelte Hot French Toast
+
+Buttery smooth toast notifications for Svelte 5. Lightweight, customizable, and beautiful by default.
+
 -   [Demo](https://svelte-hot-french-toast.vercel.app)
 -   [CHANGELOG](https://github.com/babakfp/svelte-hot-french-toast/blob/main/CHANGELOG.md)
 -   [NPM](https://www.npmjs.com/package/svelte-hot-french-toast)
 -   [GitHub](https://github.com/babakfp/svelte-hot-french-toast)
-
-# Svelte Hot French Toast
-
-Buttery smooth toast notifications for Svelte 5. Lightweight, customizable, and beautiful by default.
 
 > [!IMPORTANT]
 > This is only compatible with Svelte 5. If you're using Svelte 4, please use a compatible version of [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast).
