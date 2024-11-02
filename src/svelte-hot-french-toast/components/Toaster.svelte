@@ -8,15 +8,15 @@
         position = "top-center",
         toastOptions,
         gutter = 8,
-        containerStyle,
-        containerClass,
+        style,
+        class: class_,
     }: {
         reverseOrder?: boolean
         position?: ToastPosition
         toastOptions?: ToastOptions
         gutter?: number
-        containerStyle?: string
-        containerClass?: string
+        style?: string
+        class?: string
     } = $props()
 
     const toaster = useToaster(toastOptions)
@@ -35,8 +35,8 @@
 </script>
 
 <div
-    class="toaster {containerClass}"
-    style={containerStyle}
+    class="toaster {class_}"
+    {style}
     onmouseenter={toaster.handlers.pause}
     onmouseleave={toaster.handlers.resume}
     role="alert"

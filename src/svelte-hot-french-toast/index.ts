@@ -6,7 +6,6 @@ export type {
     Toast,
     Renderable,
     ValueOrFunction,
-    ToasterProps,
     DefaultToastOptions,
     IconTheme,
     ToastType,

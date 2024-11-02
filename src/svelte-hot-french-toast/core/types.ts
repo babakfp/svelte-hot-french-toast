@@ -86,12 +86,3 @@ export type ToastOptions<
 export type DefaultToastOptions = ToastOptions & {
     [key in ToastType]?: ToastOptions
 }
-
-export type ToasterProps = {
-    position?: ToastPosition
-    toastOptions?: DefaultToastOptions
-    reverseOrder?: boolean
-    gutter?: number
-    containerStyle?: string
-    containerClass?: string
-}
