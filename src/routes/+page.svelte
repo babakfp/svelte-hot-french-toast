@@ -1,5 +1,4 @@
 <script lang="ts">
-    import pkg from "~/package.json"
     import IconCheckBold from "phosphor-icons-svelte/IconCheckBold.svelte"
     import IconCodeBold from "phosphor-icons-svelte/IconCodeBold.svelte"
     import IconSparkleFill from "phosphor-icons-svelte/IconSparkleFill.svelte"
@@ -68,12 +67,6 @@
                 <span>Source</span>
             </a>
         </div>
-        <a
-            class="mt-5 rounded-full border px-2 py-1 text-sm text-gray-500"
-            href="https://npmjs.com/package/svelte-hot-french-toast"
-        >
-            Version {pkg.version}
-        </a>
         <div
             class="mt-10 grid grid-cols-2 gap-4 self-stretch font-medium md:grid-cols-3"
         >

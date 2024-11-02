@@ -6,7 +6,6 @@ export default {
     kit: {
         adapter: adapter(),
         alias: {
-            "~": ".",
             "svelte-hot-french-toast": "src/svelte-hot-french-toast/index.ts",
         },
     },
