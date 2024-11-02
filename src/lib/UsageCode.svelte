@@ -1,4 +1,4 @@
-export default `<script lang="ts">
+<script lang="ts">
     import toast, { Toaster } from "svelte-hot-french-toast"
 
     const makeToast = () => {
@@ -8,4 +8,4 @@ export default `<script lang="ts">
 
 <Toaster />
 
-<button onclick={makeToast}>Toast</button>`
+<button onclick={makeToast}>Toast</button>

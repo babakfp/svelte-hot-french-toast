@@ -4,8 +4,8 @@
     import IconSparkleFill from "phosphor-icons-svelte/IconSparkleFill.svelte"
     import toast, { Toaster } from "svelte-hot-french-toast"
     import { CodeBlock } from "$lib/CodeBlock"
-    import demoCode from "$lib/demoCode"
     import Examples from "$lib/Examples.svelte"
+    import usageCode from "$lib/UsageCode.svelte?raw"
 
     const makeToast = () => {
         toast.promise(
@@ -93,7 +93,7 @@
         </div>
         <div>
             <h2 class="mb-4 text-xl font-bold">Usage</h2>
-            <CodeBlock code={demoCode} lang="svelte" />
+            <CodeBlock code={usageCode} lang="svelte" />
         </div>
     </section>
 
