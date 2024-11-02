@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import type { DOMToast, ToastOptions, ToastPosition } from "../core/types"
     import useToaster from "../core/useToaster.svelte.js"
     import ToastWrapper from "./ToastWrapper.svelte"
@@ -10,6 +11,7 @@
         gutter = 8,
         style,
         class: class_,
+        children,
     }: {
         reverseOrder?: boolean
         position?: ToastPosition
@@ -17,11 +19,12 @@
         gutter?: number
         style?: string
         class?: string
+        children?: Snippet<[{ toasts: DOMToast[] }]>
     } = $props()
 
     const toaster = useToaster(toastOptions)
 
-    const toasts_: DOMToast[] = $derived(
+    const toasts: DOMToast[] = $derived(
         toaster.toasts.map((toast) => ({
             ...toast,
             position: toast.position || position,
@@ -41,13 +44,18 @@
     onmouseleave={toaster.handlers.resume}
     role="alert"
 >
-    {#each toasts_ as toast (toast.id)}
-        <ToastWrapper
-            {toast}
-            setHeight={(height) =>
-                toaster.handlers.updateHeight(toast.id, height)}
-        />
-    {/each}
+    {#if children}
+        {@render children({ toasts })}
+    {:else}
+        {#each toasts as toast (toast.id)}
+            <ToastWrapper
+                {toast}
+                setHeight={(height) => {
+                    return toaster.handlers.updateHeight(toast.id, height)
+                }}
+            />
+        {/each}
+    {/if}
 </div>
 
 <style>
