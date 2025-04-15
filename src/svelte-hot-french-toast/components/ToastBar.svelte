@@ -25,19 +25,15 @@
         >
     } = $props()
 
-    let factor = $state<number>()
-    let animation = $state<string>()
-
-    $effect(() => {
+    const factor = $derived.by(() => {
         const top = (toast.position || position || "top-center").includes("top")
+        return top ? 1 : -1
+    })
 
-        factor = top ? 1 : -1
-
-        const [enter, exit] = prefersReducedMotion()
-            ? ["fade-in", "fade-out"]
-            : ["enter", "exit"]
-
-        animation = toast.visible ? enter : exit
+    const animation = $derived.by(() => {
+        const [enter, exit] =
+            prefersReducedMotion() ? ["fade-in", "fade-out"] : ["enter", "exit"]
+        return toast.visible ? enter : exit
     })
 </script>
 

@@ -19,7 +19,7 @@
 </script>
 
 <button
-    class="invisible absolute -right-4 top-0 flex bg-white/10 p-2 text-white hover:bg-white/15 group-[&:focus-within]:visible group-[&:hover]:visible sm:right-2 sm:top-2 sm:rounded-md"
+    class="invisible absolute top-0 -right-4 flex bg-white/10 p-2 text-white group-[&:focus-within]:visible group-[&:hover]:visible hover:bg-white/15 sm:top-2 sm:right-2 sm:rounded-md"
     onclick={() => copy(text)}
 >
     <IconCopySimpleFill />

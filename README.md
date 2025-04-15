@@ -4,10 +4,10 @@
 
 Buttery smooth toast notifications for Svelte 5. Lightweight, customizable, and beautiful by default.
 
--   [Demo](https://svelte-hot-french-toast.vercel.app)
--   [CHANGELOG](https://github.com/babakfp/svelte-hot-french-toast/blob/main/CHANGELOG.md)
--   [NPM](https://www.npmjs.com/package/svelte-hot-french-toast)
--   [GitHub](https://github.com/babakfp/svelte-hot-french-toast)
+- [Demo](https://svelte-hot-french-toast.vercel.app)
+- [CHANGELOG](https://github.com/babakfp/svelte-hot-french-toast/blob/main/CHANGELOG.md)
+- [NPM](https://www.npmjs.com/package/svelte-hot-french-toast)
+- [GitHub](https://github.com/babakfp/svelte-hot-french-toast)
 
 > [!IMPORTANT]
 > This is only compatible with Svelte 5. If you're using Svelte 4, please use a compatible version of [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast).
@@ -42,5 +42,5 @@ I created this because the original project [Svelte French Toast](https://github
 
 ### Thanks
 
--   Thanks to [React Hot Toast](https://github.com/timolins/react-hot-toast) and its contributors.
--   Thanks to [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast) and its contributors.
+- Thanks to [React Hot Toast](https://github.com/timolins/react-hot-toast) and its contributors.
+- Thanks to [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast) and its contributors.

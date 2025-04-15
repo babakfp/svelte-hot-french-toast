@@ -2,10 +2,10 @@ import {
     pause as _pause,
     resume as _resume,
     update,
-    useToasterStore,
-} from "./store.svelte.js"
-import toast from "./toast.js"
-import type { Toast, ToastOptions, ToastPosition } from "./types.js"
+    useToasterState,
+} from "./state.svelte"
+import toast from "./toast"
+import type { Toast, ToastOptions, ToastPosition } from "./types"
 
 const calculateOffset = (
     toast: Toast,
@@ -20,8 +20,8 @@ const calculateOffset = (
 
     const relevantToasts = toasts.filter(
         (t) =>
-            (t.position || defaultPosition) ===
-                (toast.position || defaultPosition) && t.height,
+            (t.position || defaultPosition)
+                === (toast.position || defaultPosition) && t.height,
     )
     const toastIndex = relevantToasts.findIndex((t) => t.id === toast.id)
     const toastsBefore = relevantToasts.filter(
@@ -44,13 +44,13 @@ const handlers = {
         _resume(Date.now())
     },
     updateHeight: (toastId: string, height: number) => {
-        update({ id: toastId, height })
+        update({ id: toastId, height }, false)
     },
     calculateOffset,
 }
 
 export default (toastOptions?: ToastOptions) => {
-    const toaster = useToasterStore(toastOptions)
+    const toaster = useToasterState(toastOptions)
     const timeouts = new Map<Toast["id"], ReturnType<typeof setTimeout>>()
 
     $effect(() => {

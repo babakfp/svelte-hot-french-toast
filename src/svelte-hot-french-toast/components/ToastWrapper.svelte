@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount, type Snippet } from "svelte"
+    import { untrack, type Snippet } from "svelte"
     import type { DOMToast } from "../core/types"
     import { prefersReducedMotion } from "../core/utils"
     import ToastBar from "./ToastBar.svelte"
@@ -15,23 +15,28 @@
         children?: Snippet<[{ toast: DOMToast }]>
     } = $props()
 
-    let wrapperEl = $state<HTMLElement>()
-    onMount(() => {
-        if (wrapperEl) setHeight(wrapperEl.getBoundingClientRect().height)
+    let clientHeight = $state<number>()
+
+    $effect(() => {
+        untrack(() => {
+            if (typeof clientHeight !== "number") return
+            setHeight(clientHeight)
+        })
+        const _dependency = clientHeight
     })
 
     const top = $derived(toast.position?.includes("top") ? 0 : undefined)
     const bottom = $derived(toast.position?.includes("bottom") ? 0 : undefined)
     const factor = $derived(toast.position?.includes("top") ? 1 : -1)
     const justifyContent = $derived(
-        (toast.position?.includes("center") && "center") ||
-            (toast.position?.includes("end") && "flex-end") ||
-            undefined,
+        (toast.position?.includes("center") && "center")
+            || (toast.position?.includes("end") && "flex-end")
+            || undefined,
     )
 </script>
 
 <div
-    bind:this={wrapperEl}
+    bind:clientHeight
     class="wrapper"
     class:active={toast.visible}
     class:transition={!prefersReducedMotion()}

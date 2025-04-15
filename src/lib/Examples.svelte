@@ -9,7 +9,7 @@
     {#each examples as example (example.title)}
         <label
             for={example.title}
-            class="cursor-pointer rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500"
+            class="rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500"
             class:checked={example.title === selected}
         >
             <input
@@ -44,7 +44,9 @@
     </div>
 {/each}
 
-<style lang="postcss">
+<style>
+    @reference "../app.css";
+
     input[type="radio"] {
         @apply appearance-none;
     }

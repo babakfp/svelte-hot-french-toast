@@ -18,8 +18,10 @@
     <p>{error}</p>
 {/await}
 
-<style lang="postcss">
+<style>
+    @reference "../../app.css";
+
     :global pre {
-        @apply -mx-4 block select-text overflow-x-auto p-4 selection:bg-white/10 sm:mx-0 sm:rounded-xl sm:p-6;
+        @apply -mx-4 block overflow-x-auto p-4 select-text selection:bg-white/10 sm:mx-0 sm:rounded-xl sm:p-6;
     }
 </style>

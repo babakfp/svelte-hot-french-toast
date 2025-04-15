@@ -2,10 +2,13 @@
 export default {
     semi: false,
     tabWidth: 4,
+    htmlWhitespaceSensitivity: "ignore",
+    experimentalTernaries: true,
+    experimentalOperatorPosition: "start",
     plugins: [
         "prettier-plugin-svelte",
-        "prettier-plugin-tailwindcss",
         "@ianvs/prettier-plugin-sort-imports",
+        "prettier-plugin-tailwindcss",
     ],
     importOrder: [
         "^@",

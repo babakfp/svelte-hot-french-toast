@@ -12,8 +12,8 @@ export type {
     ValueFunction,
 } from "./core/types"
 
-export { default as useToaster } from "./core/useToaster.svelte.js"
-export { useToasterStore } from "./core/store.svelte.js"
+export { default as useToaster } from "./core/useToaster.svelte"
+export { useToasterState } from "./core/state.svelte"
 export { default as ToastBar } from "./components/ToastBar.svelte"
 export { default as ToastIcon } from "./components/ToastIcon.svelte"
 export { default as Toaster } from "./components/Toaster.svelte"

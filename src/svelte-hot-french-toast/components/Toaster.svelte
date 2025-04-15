@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
     import type { DOMToast, ToastOptions, ToastPosition } from "../core/types"
-    import useToaster from "../core/useToaster.svelte.js"
+    import useToaster from "../core/useToaster.svelte"
     import ToastWrapper from "./ToastWrapper.svelte"
 
     let {

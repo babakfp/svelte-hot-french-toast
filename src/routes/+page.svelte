@@ -1,6 +1,5 @@
 <script lang="ts">
     import IconCheckBold from "phosphor-icons-svelte/IconCheckBold.svelte"
-    import IconCodeBold from "phosphor-icons-svelte/IconCodeBold.svelte"
     import IconSparkleFill from "phosphor-icons-svelte/IconSparkleFill.svelte"
     import toast, { Toaster } from "svelte-hot-french-toast"
     import { CodeBlock } from "$lib/CodeBlock"
@@ -27,20 +26,20 @@
     <div class="container flex max-w-xl flex-col items-center text-center">
         <img class="mb-10 h-16" src="favicon.png" alt="" />
         <div
-            class="mb-10 flex flex-col items-center space-y-3 text-white md:flex-row md:space-x-3 md:space-y-0"
+            class="mb-10 flex flex-col items-center space-y-3 text-white md:flex-row md:space-y-0 md:space-x-3"
         >
             <div
-                class="-rotate-2 rounded-xl bg-[#322f35] p-4 text-xl font-extrabold uppercase tracking-widest shadow-lg md:text-2xl"
+                class="-rotate-2 rounded-xl bg-gray-700 p-4 text-xl font-extrabold tracking-widest uppercase shadow-lg md:text-2xl"
             >
                 Svelte
             </div>
             <div
-                class="rotate-3 rounded-xl bg-[#fd6819] p-4 text-xl font-extrabold uppercase tracking-widest shadow-lg md:text-2xl"
+                class="rotate-3 rounded-xl bg-orange-500 p-4 text-xl font-extrabold tracking-widest uppercase shadow-lg md:text-2xl"
             >
                 Hot French
             </div>
             <div
-                class="-rotate-2 rounded-xl bg-[#322f35] p-4 text-xl font-extrabold uppercase tracking-widest shadow-lg md:text-2xl"
+                class="-rotate-2 rounded-xl bg-gray-700 p-4 text-xl font-extrabold tracking-widest uppercase shadow-lg md:text-2xl"
             >
                 Toast
             </div>
@@ -61,9 +60,8 @@
             </button>
             <a
                 href="https://github.com/babakfp/svelte-hot-french-toast"
-                class="flex items-center space-x-2 text-gray-500"
+                class="flex items-center space-x-2 rounded-xl border-2 border-gray-100 bg-gray-50 px-5 py-2 text-lg"
             >
-                <IconCodeBold class="text-xl" />
                 <span>Source</span>
             </a>
         </div>
@@ -105,7 +103,7 @@
 
 <div class="h-8 bg-gradient-to-b from-gray-100 to-white"></div>
 
-<footer class="bg-white pb-4 pt-24">
+<footer class="bg-white pt-24 pb-4">
     <div class="container max-w-2xl space-y-2 text-center">
         <a
             class="underline"

@@ -11,6 +11,7 @@
 </script>
 
 <span>
-    Custom and <b>bold</b> with props like {someProp}!
+    Custom and <b>bold</b>
+    with props like {someProp}!
     <button onclick={() => toast_.dismiss(toast.id)}>Dismiss</button>
 </span>

@@ -33,8 +33,8 @@ const clearFromRemoveQueue = (toastId: string) => {
     }
 }
 
-export const update = (toast: Partial<Toast>) => {
-    if (toast.id) {
+export const update = (toast: Partial<Toast>, clearTimeout = true) => {
+    if (clearTimeout && toast.id) {
         clearFromRemoveQueue(toast.id)
     }
     toasts = toasts.map((t) => (t.id === toast.id ? { ...t, ...toast } : t))
@@ -63,9 +63,9 @@ export const dismiss = (toastId?: Toast["id"]) => {
     }
 
     toasts = toasts.map((t) =>
-        t.id === toastId || toastId === undefined
-            ? { ...t, visible: false }
-            : t,
+        t.id === toastId || toastId === undefined ?
+            { ...t, visible: false }
+        :   t,
     )
 }
 
@@ -102,7 +102,7 @@ const defaultTimeouts: {
     custom: 4000,
 }
 
-export const useToasterStore = (
+export const useToasterState = (
     toastOptions: DefaultToastOptions = {},
 ): State => {
     const mergedToasts = $derived(
@@ -111,10 +111,10 @@ export const useToasterStore = (
             ...toastOptions[t.type],
             ...t,
             duration:
-                t.duration ||
-                toastOptions[t.type]?.duration ||
-                toastOptions?.duration ||
-                defaultTimeouts[t.type],
+                t.duration
+                || toastOptions[t.type]?.duration
+                || toastOptions?.duration
+                || defaultTimeouts[t.type],
             style: [
                 toastOptions.style,
                 toastOptions[t.type]?.style,

@@ -4,7 +4,7 @@
 
     let {
         type,
-        icon,
+        icon: Icon,
         iconTheme,
     }: {
         type: Toast["type"]
@@ -13,11 +13,10 @@
     } = $props()
 </script>
 
-{#if typeof icon === "string"}
-    <div class="animated">{icon}</div>
-{:else if typeof icon !== "undefined"}
-    {@const SvelteComponent = icon}
-    <SvelteComponent />
+{#if typeof Icon === "string"}
+    <div class="animated">{Icon}</div>
+{:else if typeof Icon !== "undefined"}
+    <Icon />
 {:else if type !== "blank"}
     <div class="indicator">
         <IconLoading {...iconTheme} />

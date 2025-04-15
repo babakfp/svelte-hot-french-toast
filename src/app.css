@@ -1,9 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss-addons";
+
+@theme {
+    /* --color-black: initial; */
+    /* --color-white: initial; */
+    --color-zinc-*: initial;
+    --color-slate-*: initial;
+    --color-stone-*: initial;
+    --color-neutral-*: initial;
+
+    --color-gray-50: oklch(0.985 0 0); /* --color-neutral-50 */
+    --color-gray-100: oklch(0.97 0 0); /* --color-neutral-100 */
+    --color-gray-200: oklch(0.922 0 0); /* --color-neutral-200 */
+    --color-gray-300: oklch(0.87 0 0); /* --color-neutral-300 */
+    --color-gray-400: oklch(0.708 0 0); /* --color-neutral-400 */
+    --color-gray-500: oklch(0.556 0 0); /* --color-neutral-500 */
+    --color-gray-600: oklch(0.439 0 0); /* --color-neutral-600 */
+    --color-gray-700: oklch(0.371 0 0); /* --color-neutral-700 */
+    --color-gray-800: oklch(0.269 0 0); /* --color-neutral-800 */
+    --color-gray-900: oklch(0.205 0 0); /* --color-neutral-900 */
+    --color-gray-950: oklch(0.145 0 0); /* --color-neutral-950 */
+
+    --color-background: oklch(0.97 0 0); /* --color-neutral-100 */
+    --color-foreground: oklch(0.205 0 0); /* --color-neutral-900 */
+
+    --radius-lg: initial;
+    --radius: 0.5rem; /* --radius-lg */
+
+    --font-sans: "Jost Variable";
+    --font-mono: "JetBrains Mono Variable";
+    --font-mono--font-variation-settings: "MONO" 1;
+}
+
+@utility container {
+    @apply mx-auto max-w-screen-xl px-4;
+}
 
 @layer base {
     * {
-        @apply outline-none drag-none;
+        @apply drag-none [outline:transparent];
     }
 }
