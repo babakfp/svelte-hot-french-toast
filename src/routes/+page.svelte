@@ -5,7 +5,7 @@
     import ChangePositionExamples from "$lib/ChangePositionExamples.svelte"
     import { CodeBlock } from "$lib/CodeBlock"
     import Examples from "$lib/Examples.svelte"
-    import usageCode from "$lib/UsageCode.svelte?raw"
+    import usageCode from "$lib/usage-code.svelte?raw"
 
     const makeToast = () => {
         toast.promise(

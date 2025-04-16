@@ -38,6 +38,6 @@
 
 @layer base {
     * {
-        @apply drag-none [outline:transparent];
+        @apply drag-none scrollbar-none [outline:transparent];
     }
 }

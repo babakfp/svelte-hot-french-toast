@@ -1,6 +1,7 @@
 import type { BundledLanguage } from "shiki"
 import toast from "svelte-hot-french-toast"
 import RichContent from "./RichContent.svelte"
+import richContent from "./RichContent.svelte?raw"
 
 type Example = {
     title: string
@@ -120,33 +121,18 @@ export default [
         snippet: [
             {
                 lang: "svelte",
-                code: `// RichContent.svelte
-
-<script lang="ts">
-	import toast_, { type Toast } from "svelte-hot-french-toast"
-
-    let {
-        toast,
-        myText,
-    }: {
-        toast: Toast
-        myText: string
-    } = $props()
-</script>
-
-<span>
-    Custom and <b>{myText}</b>
-    <button onclick={() => toast_.dismiss(toast.id)}>Dismiss</button>
-</span>`,
-            },
-            {
-                lang: "svelte",
                 code: `<script lang="ts">
 	import toast from "svelte-hot-french-toast"
     import RichContent from "./RichContent.svelte"
 
 	toast(RichContent, { props: { myText: "bold" } })
 </script>`,
+            },
+            {
+                lang: "svelte",
+                code: `// RichContent.svelte
+
+${richContent}`,
             },
         ],
         html: true,
