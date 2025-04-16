@@ -1,12 +1,12 @@
 ## 2.0.0
 
-### Features
-
-- Add Warning and Info Toasts. https://github.com/kbrgl/svelte-french-toast/issues/92.
-
 ### Breaking
 
 - Rename `useToasterStore` to `useToasterState`.
+
+### Features
+
+- Add Warning and Info Toasts. https://github.com/kbrgl/svelte-french-toast/issues/92.
 
 ### Fixes
 
