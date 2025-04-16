@@ -100,6 +100,8 @@ const defaultTimeouts: {
     success: 2000,
     loading: Infinity,
     custom: 4000,
+    warning: 4000,
+    info: 4000,
 }
 
 export const useToasterState = (

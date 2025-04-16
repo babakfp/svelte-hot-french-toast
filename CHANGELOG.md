@@ -1,12 +1,16 @@
 ## 2.0.0
 
+### Features
+
+- Add Warning and Info Toasts. https://github.com/kbrgl/svelte-french-toast/issues/92.
+
 ### Breaking
 
 - Rename `useToasterStore` to `useToasterState`.
 
 ### Fixes
 
-- When toast content height changes, change toast height accordingly. https://github.com/kbrgl/svelte-french-toast/pull/75
+- When toast content height changes, change toast height accordingly. https://github.com/kbrgl/svelte-french-toast/pull/75.
 
 ## 1.0.0
 

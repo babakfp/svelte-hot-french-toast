@@ -1,6 +1,12 @@
 <script lang="ts">
     import type { Toast } from "../core/types"
-    import { IconError, IconLoading, IconSuccess } from "./icons"
+    import {
+        IconError,
+        IconInfo,
+        IconLoading,
+        IconSuccess,
+        IconWarning,
+    } from "./icons"
 
     let {
         type,
@@ -24,6 +30,10 @@
             <div class="status">
                 {#if type === "error"}
                     <IconError {...iconTheme} />
+                {:else if type === "warning"}
+                    <IconWarning {...iconTheme} />
+                {:else if type === "info"}
+                    <IconInfo {...iconTheme} />
                 {:else}
                     <IconSuccess {...iconTheme} />
                 {/if}

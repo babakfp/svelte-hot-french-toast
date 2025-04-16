@@ -58,6 +58,8 @@ toast.error = createHandler("error")
 toast.success = createHandler("success")
 toast.loading = createHandler("loading")
 toast.custom = createHandler("custom")
+toast.warning = createHandler("warning")
+toast.info = createHandler("info")
 
 toast.dismiss = (toastId?: string) => {
     dismiss(toastId)

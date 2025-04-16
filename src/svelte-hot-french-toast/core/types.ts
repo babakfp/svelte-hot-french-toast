@@ -1,6 +1,13 @@
 import type { Component } from "svelte"
 
-export type ToastType = "success" | "error" | "loading" | "blank" | "custom"
+export type ToastType =
+    | "success"
+    | "error"
+    | "info"
+    | "loading"
+    | "blank"
+    | "custom"
+    | "warning"
 
 export type ToastPosition =
     | "top-start"

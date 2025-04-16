@@ -194,4 +194,26 @@ export default [
             })
         },
     },
+    {
+        title: "Warning",
+        emoji: "⚠️",
+        snippet: {
+            lang: "js",
+            code: `toast.warning("Be careful!")`,
+        },
+        action: () => {
+            toast.warning("Be careful!")
+        },
+    },
+    {
+        title: "Info",
+        emoji: "ℹ️",
+        snippet: {
+            lang: "js",
+            code: `toast.info("Be careful!")`,
+        },
+        action: () => {
+            toast.info("Be careful!")
+        },
+    },
 ] satisfies Example[]

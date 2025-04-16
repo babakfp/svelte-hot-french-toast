@@ -1,3 +1,5 @@
 export { default as IconError } from "./IconError.svelte"
+export { default as IconInfo } from "./IconInfo.svelte"
 export { default as IconLoading } from "./IconLoading.svelte"
 export { default as IconSuccess } from "./IconSuccess.svelte"
+export { default as IconWarning } from "./IconWarning.svelte"
