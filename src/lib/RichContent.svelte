@@ -3,15 +3,14 @@
 
     let {
         toast,
-        someProp,
+        myText,
     }: {
         toast: Toast
-        someProp: string
+        myText: string
     } = $props()
 </script>
 
 <span>
-    Custom and <b>bold</b>
-    with props like {someProp}!
+    Custom and <b>{myText}</b>
     <button onclick={() => toast_.dismiss(toast.id)}>Dismiss</button>
 </span>

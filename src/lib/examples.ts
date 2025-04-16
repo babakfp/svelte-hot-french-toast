@@ -127,16 +127,16 @@ export default [
 
     let {
         toast,
-        someProp,
+        myText,
     }: {
         toast: Toast
-        someProp: string
+        myText: string
     } = $props()
 </script>
 
 <span>
-	Custom and <b>bold</b> with props like {someProp}!
-	<button onclick={() => toast_.dismiss(toast.id)}>Dismiss</button>
+    Custom and <b>{myText}</b>
+    <button onclick={() => toast_.dismiss(toast.id)}>Dismiss</button>
 </span>`,
             },
             {
@@ -145,13 +145,13 @@ export default [
 	import toast from "svelte-hot-french-toast"
     import RichContent from "./RichContent.svelte"
 
-	toast(RichContent, { props: { someProp: "⭐" } })
+	toast(RichContent, { props: { myText: "bold" } })
 </script>`,
             },
         ],
         html: true,
         action: () => {
-            toast(RichContent, { props: { someProp: "⭐" } })
+            toast(RichContent, { props: { myText: "bold" } })
         },
     },
     {

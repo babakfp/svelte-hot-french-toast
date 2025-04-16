@@ -2,6 +2,7 @@
     import IconCheckBold from "phosphor-icons-svelte/IconCheckBold.svelte"
     import IconSparkleFill from "phosphor-icons-svelte/IconSparkleFill.svelte"
     import toast, { Toaster } from "svelte-hot-french-toast"
+    import ChangePositionExamples from "$lib/ChangePositionExamples.svelte"
     import { CodeBlock } from "$lib/CodeBlock"
     import Examples from "$lib/Examples.svelte"
     import usageCode from "$lib/UsageCode.svelte?raw"
@@ -98,6 +99,11 @@
     <section>
         <h2 class="mb-4 text-xl font-bold">Examples</h2>
         <Examples />
+    </section>
+
+    <section>
+        <h2 class="mb-4 text-xl font-bold">Change Position</h2>
+        <ChangePositionExamples />
     </section>
 </div>
 
