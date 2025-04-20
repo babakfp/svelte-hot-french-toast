@@ -196,10 +196,10 @@ ${richContent}`,
         emoji: "ℹ️",
         snippet: {
             lang: "js",
-            code: `toast.info("Be careful!")`,
+            code: `toast.info("This is some info.")`,
         },
         action: () => {
-            toast.info("Be careful!")
+            toast.info("This is some info.")
         },
     },
 ] satisfies Example[]
