@@ -1,3 +1,7 @@
+## 3.0.1
+
+- feat: add `keepAfterSesolutionOrRejection` option to `toast.promise()`.
+
 ## 3.0.0
 
 ### Breaking
