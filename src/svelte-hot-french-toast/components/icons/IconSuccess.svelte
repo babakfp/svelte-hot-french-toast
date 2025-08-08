@@ -15,7 +15,7 @@
         background: var(--primary, #61d345);
         position: relative;
         transform: rotate(45deg);
-        animation: circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        animation: circle-animation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
             forwards;
         animation-delay: 100ms;
     }
@@ -23,7 +23,7 @@
     div::after {
         content: "";
         box-sizing: border-box;
-        animation: checkmarkAnimation 0.2s ease-out forwards;
+        animation: checkmark-animation 0.2s ease-out forwards;
         opacity: 0;
         animation-delay: 200ms;
         position: absolute;
@@ -36,7 +36,7 @@
         width: 6px;
     }
 
-    @keyframes circleAnimation {
+    @keyframes circle-animation {
         from {
             transform: scale(0) rotate(45deg);
             opacity: 0;
@@ -47,7 +47,7 @@
         }
     }
 
-    @keyframes checkmarkAnimation {
+    @keyframes checkmark-animation {
         0% {
             height: 0;
             width: 0;
