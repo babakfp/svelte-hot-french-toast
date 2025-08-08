@@ -42,10 +42,13 @@
     {#each positions as position}
         <label
             for={position}
-            class="rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500"
-            class:checked={position === selected}
+            class={[
+                "rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500",
+                { "border-blue-500 font-bold": position === selected },
+            ]}
         >
             <input
+                class="appearance-none"
                 type="radio"
                 id={position}
                 name="examples"
@@ -66,14 +69,3 @@
         <CodeBlock code={code.code} lang={code.lang} />
     </div>
 {/each}
-
-<style>
-    @reference "../app.css";
-
-    input[type="radio"] {
-        @apply appearance-none;
-    }
-    .checked {
-        @apply border-blue-500 font-bold;
-    }
-</style>
