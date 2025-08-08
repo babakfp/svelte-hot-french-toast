@@ -38,7 +38,7 @@
 </script>
 
 <div
-    class="toaster {class_}"
+    class="svelte-hot-french-toast__toaster {class_}"
     {style}
     onmouseenter={toaster.handlers.pause}
     onmouseleave={toaster.handlers.resume}
@@ -59,7 +59,7 @@
 </div>
 
 <style>
-    .toaster {
+    .svelte-hot-french-toast__toaster {
         --default-offset: 16px;
 
         position: fixed;

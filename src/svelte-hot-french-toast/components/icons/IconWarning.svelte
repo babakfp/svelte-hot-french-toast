@@ -27,11 +27,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
-        animation: outlineAnimation 300ms forwards;
+        animation: outline-animation 300ms forwards;
         animation-delay: 100ms;
     }
 
-    @keyframes outlineAnimation {
+    @keyframes outline-animation {
         0% {
             transform: translate(-50%, -50%) scale(0);
             opacity: 0;
@@ -50,12 +50,12 @@
         opacity: 0;
         border-radius: 10px;
         background: var(--primary, #ffa400);
-        animation: circleAnimation 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
-            forwards;
+        animation: circle-animation 200ms
+            cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         animation-delay: 160ms;
     }
 
-    @keyframes circleAnimation {
+    @keyframes circle-animation {
         from {
             transform: scale(0);
             opacity: 0;
@@ -73,12 +73,12 @@
         position: absolute;
         top: 0;
         transform: scale(0);
-        animation: exclamationAnimation 500ms forwards;
+        animation: exclamation-animation 500ms forwards;
         animation-delay: 100ms;
         opacity: 0;
     }
 
-    @keyframes exclamationAnimation {
+    @keyframes exclamation-animation {
         0% {
             transform: scale(0);
             opacity: 0;
