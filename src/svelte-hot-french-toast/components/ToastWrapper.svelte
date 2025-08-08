@@ -11,6 +11,22 @@
         children,
     }: {
         toast: DOMToast
+        /**
+         * A callback function that is called when the toast's height changes.
+         *
+         * This is useful when you want to update the height of the toast
+         * dynamically, for example, when the toast is being displayed.
+         *
+         * @example
+         * ```ts
+         * <ToastWrapper
+         *      {toast}
+         *      setHeight={(height) => {
+         *          return toaster.handlers.updateHeight(toast.id, height)
+         *      }}
+         *  />
+         * ```
+         */
         setHeight: (height: number) => void
         children?: Snippet<[{ toast: DOMToast }]>
     } = $props()
