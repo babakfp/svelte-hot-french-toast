@@ -9,10 +9,13 @@
     {#each examples as example (example.title)}
         <label
             for={example.title}
-            class="rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500"
-            class:checked={example.title === selected}
+            class={[
+                "rounded-xl border-2 border-transparent bg-gray-200 p-2 transition-colors hover:border-blue-500",
+                { "border-blue-500 font-bold": example.title === selected },
+            ]}
         >
             <input
+                class="appearance-none"
                 type="radio"
                 id={example.title}
                 name="examples"
@@ -43,14 +46,3 @@
         {/if}
     </div>
 {/each}
-
-<style>
-    @reference "../app.css";
-
-    input[type="radio"] {
-        @apply appearance-none;
-    }
-    .checked {
-        @apply border-blue-500 font-bold;
-    }
-</style>
