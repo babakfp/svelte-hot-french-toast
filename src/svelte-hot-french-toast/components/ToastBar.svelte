@@ -32,13 +32,23 @@
 
     const animation = $derived.by(() => {
         const [enter, exit] =
-            prefersReducedMotion() ? ["fade-in", "fade-out"] : ["enter", "exit"]
+            prefersReducedMotion() ?
+                [
+                    "svelte-hot-french-toast__fade-in",
+                    "svelte-hot-french-toast__fade-out",
+                ]
+            :   [
+                    "svelte-hot-french-toast__enter",
+                    "svelte-hot-french-toast__exit",
+                ]
         return toast.visible ? enter : exit
     })
 </script>
 
 <div
-    class="base {toast.height ? animation : 'transparent'} {toast.class}"
+    class="svelte-hot-french-toast__base {toast.height ? animation : (
+        'svelte-hot-french-toast__transparent'
+    )} {toast.class}"
     style="{style}; {toast.style}"
     style:--factor={factor}
 >
@@ -59,7 +69,7 @@
 </div>
 
 <style>
-    .base {
+    .svelte-hot-french-toast__base {
         display: flex;
         align-items: center;
         background: #fff;
@@ -75,26 +85,26 @@
         border-radius: 8px;
     }
 
-    .transparent {
+    .svelte-hot-french-toast__transparent {
         opacity: 0;
     }
 
-    .enter {
+    .svelte-hot-french-toast__enter {
         animation: enter-animation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1)
             forwards;
     }
 
-    .exit {
+    .svelte-hot-french-toast__exit {
         animation: exit-animation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1)
             forwards;
     }
 
-    .fade-in {
+    .svelte-hot-french-toast__fade-in {
         animation: fade-in-animation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1)
             forwards;
     }
 
-    .fade-out {
+    .svelte-hot-french-toast__fade-out {
         animation: fade-out-animation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1)
             forwards;
     }

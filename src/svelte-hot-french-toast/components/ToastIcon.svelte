@@ -20,14 +20,14 @@
 </script>
 
 {#if typeof Icon === "string"}
-    <div class="animated">{Icon}</div>
+    <div class="svelte-hot-french-toast__animated">{Icon}</div>
 {:else if typeof Icon !== "undefined"}
     <Icon />
 {:else if type !== "blank"}
-    <div class="indicator">
+    <div class="svelte-hot-french-toast__indicator">
         <IconLoading {...iconTheme} />
         {#if type !== "loading"}
-            <div class="status">
+            <div class="svelte-hot-french-toast__status">
                 {#if type === "error"}
                     <IconError {...iconTheme} />
                 {:else if type === "warning"}
@@ -43,7 +43,7 @@
 {/if}
 
 <style>
-    .indicator {
+    .svelte-hot-french-toast__indicator {
         position: relative;
         display: flex;
         justify-content: center;
@@ -52,11 +52,11 @@
         min-height: 20px;
     }
 
-    .status {
+    .svelte-hot-french-toast__status {
         position: absolute;
     }
 
-    .animated {
+    .svelte-hot-french-toast__animated {
         position: relative;
         transform: scale(0.6);
         opacity: 0.4;

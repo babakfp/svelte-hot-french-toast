@@ -37,9 +37,9 @@
 
 <div
     bind:clientHeight
-    class="wrapper"
-    class:active={toast.visible}
-    class:transition={!prefersReducedMotion()}
+    class="svelte-hot-french-toast__wrapper"
+    class:svelte-hot-french-toast__active={toast.visible}
+    class:svelte-hot-french-toast__transition={!prefersReducedMotion()}
     style:--factor={factor}
     style:--offset={toast.offset}
     style:top
@@ -56,22 +56,22 @@
 </div>
 
 <style>
-    .wrapper {
+    .svelte-hot-french-toast__wrapper {
         inset-inline: 0;
         display: flex;
         position: absolute;
         transform: translateY(calc(var(--offset, 16px) * var(--factor) * 1px));
     }
 
-    .transition {
+    .svelte-hot-french-toast__transition {
         transition: all 230ms cubic-bezier(0.21, 1.02, 0.73, 1);
     }
 
-    .active {
+    .svelte-hot-french-toast__active {
         z-index: 9999;
     }
 
-    .active > :global(*) {
+    .svelte-hot-french-toast__active > :global(*) {
         pointer-events: auto;
     }
 </style>
