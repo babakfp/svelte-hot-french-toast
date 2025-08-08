@@ -1,6 +1,6 @@
 {
     "name": "svelte-hot-french-toast",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "Buttery smooth toast notifications for Svelte 5. Lightweight, customizable, and beautiful by default.",
     "license": "MIT",
     "scripts": {

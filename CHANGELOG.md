@@ -1,4 +1,4 @@
-## 3.0.1
+## 3.1.0
 
 - feat: add `keepAfterSesolutionOrRejection` option to `toast.promise()`.
 
