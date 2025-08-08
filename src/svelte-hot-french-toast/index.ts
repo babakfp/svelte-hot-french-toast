@@ -7,6 +7,7 @@ export type {
     Renderable,
     ValueOrFunction,
     DefaultToastOptions,
+    PromiseToastOptions,
     IconTheme,
     ToastType,
     ValueFunction,

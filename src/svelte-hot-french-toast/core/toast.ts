@@ -2,6 +2,7 @@ import { dismiss, remove, upsert } from "./state.svelte"
 import {
     resolveValue,
     type DefaultToastOptions,
+    type PromiseToastOptions,
     type Renderable,
     type Toast,
     type ToastOptions,
@@ -74,7 +75,7 @@ toast.promise = <T>(
         success: ValueOrFunction<Renderable, T>
         error: ValueOrFunction<Renderable, unknown>
     },
-    opts?: DefaultToastOptions,
+    opts?: PromiseToastOptions,
 ) => {
     const id = toast.loading(msgs.loading, { ...opts, ...opts?.loading })
 
@@ -84,6 +85,9 @@ toast.promise = <T>(
                 id,
                 ...opts,
                 ...opts?.success,
+                ...(opts?.keepAfterSesolutionOrRejection ?
+                    { duration: Infinity }
+                :   {}),
             })
             return p
         })
@@ -92,6 +96,9 @@ toast.promise = <T>(
                 id,
                 ...opts,
                 ...opts?.error,
+                ...(opts?.keepAfterSesolutionOrRejection ?
+                    { duration: Infinity }
+                :   {}),
             })
         })
 
