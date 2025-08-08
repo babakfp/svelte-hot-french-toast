@@ -1,3 +1,9 @@
+## 3.0.0
+
+### Breaking
+
+- fix: [#1](https://github.com/kbrgl/svelte-french-toast/issues/1) by adding `svelte-hot-french-toast__` prefix to all classes.
+
 ## 2.0.0
 
 ### Breaking
