@@ -1,3 +1,7 @@
+## 4.0.0
+
+- fix!: change `keepAfterSesolutionOrRejection` to `keepAfterResolutionOrRejection`.
+
 ## 3.1.0
 
 - feat: add `keepAfterSesolutionOrRejection` option to `toast.promise()`.

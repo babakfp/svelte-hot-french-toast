@@ -99,5 +99,5 @@ export type PromiseToastOptions = DefaultToastOptions & {
      * If you want to keep the toast after the promise is resolved or rejected, set this to true.
      * You would need to add a close button to the toast, so that the user can dismiss the toast manually.
      */
-    keepAfterSesolutionOrRejection?: boolean
+    keepAfterResolutionOrRejection?: boolean
 }

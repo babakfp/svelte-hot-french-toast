@@ -84,7 +84,7 @@ toast.promise = <T>(
                 id,
                 ...opts,
                 ...opts?.success,
-                ...(opts?.keepAfterSesolutionOrRejection ?
+                ...(opts?.keepAfterResolutionOrRejection ?
                     { duration: Infinity }
                 :   {}),
             })
@@ -95,7 +95,7 @@ toast.promise = <T>(
                 id,
                 ...opts,
                 ...opts?.error,
-                ...(opts?.keepAfterSesolutionOrRejection ?
+                ...(opts?.keepAfterResolutionOrRejection ?
                     { duration: Infinity }
                 :   {}),
             })
