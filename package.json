@@ -64,5 +64,6 @@
         "toast",
         "snackbar"
     ],
+    "packageManager": "pnpm@11.21.0",
     "type": "module"
 }
