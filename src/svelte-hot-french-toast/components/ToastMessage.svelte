@@ -17,12 +17,14 @@
 </div>
 
 <style>
-    .svelte-hot-french-toast__message {
-        display: flex;
-        justify-content: center;
-        margin: 4px 10px;
-        color: inherit;
-        flex: 1 1 auto;
-        white-space: pre-line;
+    @layer svelte-hot-french-toast {
+        .svelte-hot-french-toast__message {
+            display: flex;
+            justify-content: center;
+            margin: 4px 10px;
+            color: inherit;
+            flex: 1 1 auto;
+            white-space: pre-line;
+        }
     }
 </style>

@@ -1,3 +1,7 @@
+## 4.1.0
+
+- feat: wrap component styles in `@layer svelte-hot-french-toast { ... }`
+
 ## 4.0.0
 
 - fix!: change `keepAfterSesolutionOrRejection` to `keepAfterResolutionOrRejection`.

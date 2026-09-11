@@ -11,67 +11,69 @@
 </div>
 
 <style>
-    div {
-        width: 20px;
-        height: 20px;
-        position: relative;
-    }
+    @layer svelte-hot-french-toast {
+        div {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
 
-    div::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        border: 2px solid var(--primary, #0096ff);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        animation: outline-animation 300ms forwards;
-        animation-delay: 100ms;
-    }
-
-    @keyframes outline-animation {
-        0% {
+        div::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 2px solid var(--primary, #0096ff);
+            position: absolute;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%) scale(0);
-            opacity: 0;
+            animation: outline-animation 300ms forwards;
+            animation-delay: 100ms;
         }
-        20% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: translate(-50%, -50%) scale(1.25);
-            opacity: 0;
-        }
-    }
 
-    div .circle {
-        opacity: 0;
-        border-radius: 10px;
-        background: var(--primary, #0096ff);
-        animation: circle-animation 200ms
-            cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        animation-delay: 160ms;
-    }
+        @keyframes outline-animation {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            20% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.25);
+                opacity: 0;
+            }
+        }
 
-    @keyframes circle-animation {
-        from {
-            transform: scale(0);
+        div .circle {
             opacity: 0;
+            border-radius: 10px;
+            background: var(--primary, #0096ff);
+            animation: circle-animation 200ms
+                cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation-delay: 160ms;
         }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
 
-    svg {
-        color: var(--secondary, #fff);
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 0;
-        transform: scale(1.1);
+        @keyframes circle-animation {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        svg {
+            color: var(--secondary, #fff);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            transform: scale(1.1);
+        }
     }
 </style>

@@ -72,22 +72,26 @@
 </div>
 
 <style>
-    .svelte-hot-french-toast__wrapper {
-        inset-inline: 0;
-        display: flex;
-        position: absolute;
-        transform: translateY(calc(var(--offset, 16px) * var(--factor) * 1px));
-    }
+    @layer svelte-hot-french-toast {
+        .svelte-hot-french-toast__wrapper {
+            inset-inline: 0;
+            display: flex;
+            position: absolute;
+            transform: translateY(
+                calc(var(--offset, 16px) * var(--factor) * 1px)
+            );
+        }
 
-    .svelte-hot-french-toast__transition {
-        transition: all 230ms cubic-bezier(0.21, 1.02, 0.73, 1);
-    }
+        .svelte-hot-french-toast__transition {
+            transition: all 230ms cubic-bezier(0.21, 1.02, 0.73, 1);
+        }
 
-    .svelte-hot-french-toast__active {
-        z-index: 9999;
-    }
+        .svelte-hot-french-toast__active {
+            z-index: 9999;
+        }
 
-    .svelte-hot-french-toast__active > :global(*) {
-        pointer-events: auto;
+        .svelte-hot-french-toast__active > :global(*) {
+            pointer-events: auto;
+        }
     }
 </style>

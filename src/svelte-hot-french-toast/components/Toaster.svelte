@@ -59,12 +59,14 @@
 </div>
 
 <style>
-    .svelte-hot-french-toast__toaster {
-        --default-offset: 16px;
+    @layer svelte-hot-french-toast {
+        .svelte-hot-french-toast__toaster {
+            --default-offset: 16px;
 
-        position: fixed;
-        z-index: 9999;
-        inset: var(--default-offset);
-        pointer-events: none;
+            position: fixed;
+            z-index: 9999;
+            inset: var(--default-offset);
+            pointer-events: none;
+        }
     }
 </style>
