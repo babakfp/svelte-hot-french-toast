@@ -1,6 +1,6 @@
 ## 4.1.2
 
-- fix: changes to `toastOptions` prop in `<Toaster />` did not work.
+- fix: reactive changes to `toastOptions` prop in `<Toaster />` did not work.
 
 ## 4.1.1
 
