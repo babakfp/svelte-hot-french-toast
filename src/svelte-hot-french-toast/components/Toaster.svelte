@@ -26,7 +26,7 @@
         children?: Snippet<[{ toasts: DOMToast[] }]>
     } = $props()
 
-    const toaster = useToaster(toastOptions)
+    const toaster = $derived(useToaster(toastOptions))
 
     const toasts: DOMToast[] = $derived(
         toaster.toasts.map((toast) => ({
