@@ -1,6 +1,10 @@
+## 4.1.2
+
+- fix: changes to `toastOptions` prop in `<Toaster />` did not work.
+
 ## 4.1.1
 
-- fix: end .ts file imports using .js
+- fix: end `.ts` file imports using `.js`.
 
 ## 4.1.0
 
