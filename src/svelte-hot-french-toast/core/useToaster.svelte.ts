@@ -3,9 +3,9 @@ import {
     resume as _resume,
     update,
     useToasterState,
-} from "./state.svelte"
-import toast from "./toast"
-import type { Toast, ToastOptions, ToastPosition } from "./types"
+} from "./state.svelte.js"
+import toast from "./toast.js"
+import type { Toast, ToastOptions, ToastPosition } from "./types.js"
 
 const calculateOffset = (
     toast: Toast,

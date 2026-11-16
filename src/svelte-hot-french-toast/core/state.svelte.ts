@@ -1,4 +1,4 @@
-import type { DefaultToastOptions, Toast, ToastType } from "./types"
+import type { DefaultToastOptions, Toast, ToastType } from "./types.js"
 
 const TOAST_LIMIT = 20
 const TOAST_EXPIRE_DISMISS_DELAY = 1000

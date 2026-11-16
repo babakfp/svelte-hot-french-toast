@@ -1,12 +1,12 @@
 <script lang="ts">
-    import type { Toast } from "../core/types"
+    import type { Toast } from "../core/types.js"
     import {
         IconError,
         IconInfo,
         IconLoading,
         IconSuccess,
         IconWarning,
-    } from "./icons"
+    } from "./icons/index.js"
 
     let {
         type,

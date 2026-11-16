@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import type { Toast, ToastPosition } from "../core/types"
-    import { prefersReducedMotion } from "../core/utils"
+    import type { Toast, ToastPosition } from "../core/types.js"
+    import { prefersReducedMotion } from "../core/utils.js"
     import ToastIcon from "./ToastIcon.svelte"
     import ToastMessage from "./ToastMessage.svelte"
 

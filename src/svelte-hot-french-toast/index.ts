@@ -1,4 +1,4 @@
-import toast from "./core/toast"
+import toast from "./core/toast.js"
 
 export type {
     ToastOptions,
@@ -11,15 +11,15 @@ export type {
     IconTheme,
     ToastType,
     ValueFunction,
-} from "./core/types"
+} from "./core/types.js"
 
-export { default as useToaster } from "./core/useToaster.svelte"
-export { useToasterState } from "./core/state.svelte"
+export { default as useToaster } from "./core/useToaster.svelte.js"
+export { useToasterState } from "./core/state.svelte.js"
 export { default as ToastBar } from "./components/ToastBar.svelte"
 export { default as ToastIcon } from "./components/ToastIcon.svelte"
 export { default as Toaster } from "./components/Toaster.svelte"
-export * from "./components/icons"
-export { resolveValue } from "./core/types"
+export * from "./components/icons/index.js"
+export { resolveValue } from "./core/types.js"
 
 export { toast }
 export default toast

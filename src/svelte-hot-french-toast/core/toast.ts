@@ -1,4 +1,4 @@
-import { dismiss, remove, upsert } from "./state.svelte"
+import { dismiss, remove, upsert } from "./state.svelte.js"
 import {
     resolveValue,
     type PromiseToastOptions,
@@ -7,8 +7,8 @@ import {
     type ToastOptions,
     type ToastType,
     type ValueOrFunction,
-} from "./types"
-import { genId } from "./utils"
+} from "./types.js"
+import { genId } from "./utils.js"
 
 type Message<T extends Record<string, unknown> = Record<string, unknown>> =
     Renderable<T>

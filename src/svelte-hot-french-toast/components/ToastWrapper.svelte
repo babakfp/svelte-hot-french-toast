@@ -1,7 +1,7 @@
 <script lang="ts">
     import { untrack, type Snippet } from "svelte"
-    import type { DOMToast } from "../core/types"
-    import { prefersReducedMotion } from "../core/utils"
+    import type { DOMToast } from "../core/types.js"
+    import { prefersReducedMotion } from "../core/utils.js"
     import ToastBar from "./ToastBar.svelte"
     import ToastMessage from "./ToastMessage.svelte"
 

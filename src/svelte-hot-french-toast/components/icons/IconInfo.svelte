@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { IconTheme } from "../../core/types"
+    import type { IconTheme } from "../../core/types.js"
 
     let { primary, secondary }: Partial<IconTheme> = $props()
 </script>

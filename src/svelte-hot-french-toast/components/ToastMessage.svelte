@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Toast } from "../core/types"
+    import type { Toast } from "../core/types.js"
 
     let {
         toast,
