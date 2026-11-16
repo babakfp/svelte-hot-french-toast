@@ -2,10 +2,10 @@
     import IconCheckBold from "phosphor-icons-svelte/IconCheckBold.svelte"
     import IconSparkleFill from "phosphor-icons-svelte/IconSparkleFill.svelte"
     import toast, { Toaster } from "svelte-hot-french-toast"
-    import ChangePositionExamples from "$lib/ChangePositionExamples.svelte"
-    import { CodeBlock } from "$lib/CodeBlock"
-    import Examples from "$lib/Examples.svelte"
-    import usageCode from "$lib/usage-code.svelte?raw"
+    import ChangePositionExamples from "#lib/ChangePositionExamples.svelte"
+    import { CodeBlock } from "#lib/CodeBlock/index.js"
+    import Examples from "#lib/Examples.svelte"
+    import usageCode from "#lib/usage-code.svelte?raw"
 
     const makeToast = () => {
         toast.promise(
