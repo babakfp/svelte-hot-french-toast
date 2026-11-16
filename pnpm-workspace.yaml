@@ -1,3 +1,5 @@
+saveExact: true
+engineStrict: true
 allowBuilds:
     "@tailwindcss/oxide": true
     esbuild: true

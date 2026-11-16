@@ -4,3 +4,4 @@
 /dist/
 /build/
 /vite.config.*.timestamp-*
+/pnpm-lock.yaml
