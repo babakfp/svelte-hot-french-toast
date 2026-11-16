@@ -4,10 +4,10 @@
 
     let { code, lang }: { code: string; lang: BundledLanguage } = $props()
 
-    const htmlPromise = codeToHtml(code, { lang, theme: "github-dark-dimmed" })
+    const html = $derived(codeToHtml(code, { lang, theme: "github-dark-dimmed" }))
 </script>
 
-{#await htmlPromise}
+{#await html}
     <p>Loading...</p>
 {:then html}
     <div class="group relative">
