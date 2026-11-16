@@ -1,3 +1,7 @@
+## 4.1.1
+
+- fix: end .ts file imports using .js
+
 ## 4.1.0
 
 - feat: wrap component styles in `@layer svelte-hot-french-toast { ... }`.
